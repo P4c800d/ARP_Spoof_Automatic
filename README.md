@@ -30,7 +30,7 @@ El script `DDoS_ArpSpoof.sh` automatiza el proceso de un ataque de suplantación
     - Le dice al dispositivo "víctima" que la dirección MAC del router (gateway) pertenece ahora al equipo del atacante.
     - Le dice al router que la dirección MAC del dispositivo "víctima" pertenece ahora al equipo del atacante.
 
-**2. Denegación de Servicio (DoS):** A diferencia de un ataque *Man-in-the-Middle* (MitM) donde el tráfico se intercepta y reenvía, este script desactiva deliberadamente el reenvío de paquetes en el equipo atacante (`net.ipv4.ip_forward=0`). Como resultado, todo el tráfico de la víctima que intenta salir a Internet es redirigido al equipo atacante, donde es descartado. Esto provoca una interrupción total de la conexión para la víctima, resultando en una Denegación de Servicio efectiva a nivel local.
+**2. Denegación de Servicio (DDoS):** A diferencia de un ataque *Man-in-the-Middle* (MitM) donde el tráfico se intercepta y reenvía, este script desactiva deliberadamente el reenvío de paquetes en el equipo atacante (`net.ipv4.ip_forward=0`). Como resultado, todo el tráfico de la víctima que intenta salir a Internet es redirigido al equipo atacante, donde es descartado. Esto provoca una interrupción total de la conexión para la víctima, resultando en una Denegación de Servicio efectiva a nivel local.
 
 El script cuenta con una interfaz amigable, autocomprobación de privilegios y dependencias, y una función de limpieza segura (`Ctrl+C`) que detiene el ataque y restaura la tabla ARP de los dispositivos afectados para no dejar la red inoperativa.
 
